@@ -1,0 +1,8 @@
+<h1>Questions</h1>
+
+<ul *ngIf="questions">
+  <li *ngFor="let question of questions">
+    
+    <p>{{ question.answer }} </p>
+  </li>
+</ul>
