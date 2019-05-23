@@ -1,0 +1,19 @@
+<h2>My Heroes</h2>
+
+<div>
+  <label>id:
+    <input type="text" [(ngModel)]="category.id" placeholder="id">
+  </label>
+</div>
+
+
+<div>
+  <label>Category name:
+    <input type="text" [(ngModel)]="category.name" placeholder="name">
+  </label>
+</div>
+
+<div class="example-button-row">
+  <button (click)="createCategory()" mat-raised-button>Create</button>
+  
+</div>

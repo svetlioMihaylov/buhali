@@ -20,7 +20,8 @@ export class LoginComponent implements OnInit {
     
   // };   
 
-  constructor(private loginService : LoginServiceService, private location: Location,   private route: ActivatedRoute,
+  constructor(private loginService : LoginServiceService, private location: Location, 
+    private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
@@ -31,16 +32,14 @@ export class LoginComponent implements OnInit {
   login(): void {
    console.log(this.det)
   this.loginService.login(this.det).subscribe(resp => {
-    console.log(resp);
-  const result = resp['result'];
-  if(result == true){
-  this.router.navigate(['questions']);
-  } else {
-    this.router.navigate(['']);
+      console.log(resp);
+      const result = resp['logged'];
+      if(result == true){
+        this.router.navigate(['questions']);
+      } else {
+        console.log(resp);
+        this.router.navigate(['']);
+      }
+    });
   }
-  
-  
-  });
-  }
-
 }

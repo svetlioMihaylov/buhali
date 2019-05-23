@@ -1,5 +1,10 @@
 <h1>Questions</h1>
 
+<div class="example-button-row">
+  <button (click)="createCategories()" mat-raised-button>Create categories</button>
+  
+</div>
+
 <ul *ngIf="questions">
   <li *ngFor="let question of questions">
     

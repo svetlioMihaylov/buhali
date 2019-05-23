@@ -11,7 +11,7 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
 import { QuestionsComponent } from './questions/questions.component';
-
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +21,14 @@ import { QuestionsComponent } from './questions/questions.component';
     UsersComponent,
     DetailsComponent,
     LoginComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  HttpClientModule,
-  FormsModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

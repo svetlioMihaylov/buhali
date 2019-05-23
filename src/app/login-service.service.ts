@@ -13,8 +13,8 @@ export class LoginServiceService {
   
   det : LoginDetails;
    httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
 
   login ( details : LoginDetails ) : Observable<Result>{
   const serverLocation =  'http://localhost:8080/login';
@@ -22,8 +22,6 @@ export class LoginServiceService {
   // let meh =  new LoginDetails(inputUsername, inputPassword);
   // let meh  = new  LoginDetails;
   // let t = meh.build(inputUsername, inputPassword);
-  
-
 
     return this.http.post<Result>(serverLocation, details )
   }
